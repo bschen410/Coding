@@ -16,7 +16,7 @@ int compute(int *data) {
     for (i = 0; i < 10; i++) {
         if (base == 0) {
             base += 1;
-            base = base << data[i] - 1;
+            base = base << (data[i] - 1);
         } else {
             switch (data[i]) {
                 case 0:
