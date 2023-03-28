@@ -1,32 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include <string.h>
-
-int compute(char *, char *, char *);
 
 int main() {
-	char string[50], upper[50], lower[50];
-	char *ptr = string, *up = upper, *low = lower;
-	scanf("%s", string);
-	int uplen = compute(ptr, up, low);
-	printf("%s\n", up);
-	printf("%s\n", low);
-	printf("%d\n", uplen);
+    char s[50] = {-1};
+    int i, count = 0;
+    scanf("%s", s);
+    for (i = 0; i < sizeof(s); i++) {
+        if (isupper(s[i])) {
+            printf("%c", s[i]);
+            count++;
+        }
+    }
+    printf("\n");
+    for (i = 0; i < sizeof(s); i++) {
+        if (islower(s[i]))
+            printf("%c", s[i]);
+    }
+    printf("\n");
+    printf("%d", count);
+    return 0;
 }
-
-int compute(char *ptr, char *up, char *low) {
-	int i, j = 0, k = 0, sum = 0;
-	for (i = 0; i < strlen(ptr); i++) {
-		if (ptr[i] >= 'A' && ptr[i] <= 'Z') {
-			up[j] = ptr[i];
-			j++;
-			sum++; 
-		} else if (ptr[i] >= 'a' && ptr[i] <= 'z') {
-			low[k] = ptr[i];
-			k++;
-		}
-	}
-	return sum;
-}
-
