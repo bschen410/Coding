@@ -4,6 +4,8 @@
 #define db double
 using namespace std;
 
+bool dfs(int)
+
 int main() {
     return 0;
 }
