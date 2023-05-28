@@ -1,26 +1,31 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
+#define ouo ios_base::sync_with_stdio(false), cin.tie(0)
 
-struct cargo{
-	int weight;
-	int value;
-};//注意這個分號
+const int max_v = 100;
 
-int main(){
-	int amount;//儲存貨物數量
-	while(cin>>amount){
-		cargo data[amount];//儲存各貨物資訊
-		for(int t=0; t<amount; t++)
-			cin>>data[t].weight>>data[t].value;
-		//DP的部分
-		int space[101]={0};//儲存在各個容量下最大的價值 | 用101會比較方便因為會需要0的那格
-		for(int object=0; object<amount; object++){
-			for(int t2=100; t2-data[object].weight>=0; t2--){//注意如果是這種直接修改的作法需要由後向前，不然一個東西會被用很多次
-                                            //就是這裡會用到容量0價值0的那格
-				if(space[t2]<space[t2-data[object].weight]+data[object].value)
-					space[t2]=space[t2-data[object].weight]+data[object].value;
-			}
-		}
-		cout<<space[100]<<"\n";
-	}
+int main() {
+    ouo;
+    int n;
+    while (cin >> n) {
+        int v[n+1], c[n+1];
+        int dp[n+1][max_v+1];
+        memset(v, 0, sizeof(v));
+        memset(c, 0, sizeof(c));
+        memset(dp, 0, sizeof(dp));
+        for (int s = 1; s <= n; s++)
+            cin >> v[s] >> c[s];
+        // dp
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= max_v; j++) {
+                if (v[i] > j) {
+                    dp[i][j] = dp[i-1][j];
+                } else {
+                    dp[i][j] = max(dp[i-1][j], dp[i-1][j-v[i]] + c[i]);
+                }
+            }
+        }
+        cout << dp[n][max_v] << endl;
+    }
+    return 0;
 }
