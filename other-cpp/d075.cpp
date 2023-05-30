@@ -14,6 +14,10 @@ int main() {
     for (int s = 0; s < client; s++) cin >> c[s];
     int spc = grid - reserve;
     // dp
-    
+    int dp[spc];
+    memset(dp, 0, sizeof(dp));
+    for (int i = 0; i < client; i++) {
+        for (int j = spc; j >= )
+    }
     return 0;
 }
