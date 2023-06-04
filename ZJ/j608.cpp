@@ -13,6 +13,7 @@ int main() {
         cin >> time[s].second;
     //
     int dp[k+1];
-    for (int)
+    // for (int)
+    cout >> "helijfaldjfl";
     return 0;
 }
