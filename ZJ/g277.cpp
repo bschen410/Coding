@@ -27,6 +27,8 @@ int main() {
         } else {
             L = min_idx + 1;
         }
+        cout << min_idx << endl;
+        // cout << "L: " << l << " R: " << r << endl;
     }
     cout << data[l] << endl;
     return 0;
