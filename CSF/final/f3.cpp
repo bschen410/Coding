@@ -6,8 +6,5 @@ using namespace std;
 
 int main() {
     ouo;
-    int test;
-    cin >> test;
-    cout << test;
     return 0;
 }
