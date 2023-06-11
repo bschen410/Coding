@@ -1,21 +1,23 @@
-#include <iostream>
+#include <bits/stdc++.h>
+#define ouo ios_base::sync_with_stdio(false), cin.tie(0)
 using namespace std;
 
-int k, q, r;
-
 int main() {
+    ouo;
+    int k, q, r;
     cin >> k >> q >> r;
-    char c[q+1][k];
+    char c[q+1][k+1];
     cin >> c[0];
     for (int i = 1; i <= q; i++) {
-        int arr[k];
-        for (int s = 0; s < k; s++)
-            cin >> arr[s];
-        for (int j = 0; j < k; j++) {
-            c[i][arr[j]-1] = c[i-1][j];
+        for (int j = 1; j <= k; j++) {
+            int pos;
+            cin >> pos;
+            c[i][pos-1] = c[i-1][j-1];
         }
     }
-    //
+    // for (int i = 1; i <= q; i++)
+    //     for (int j = 1; j <= k; j++)
+    //         cout << c[i][j-1] << " ";
     for (int i = 0; i < r; i++) {
         for (int j = 1; j <= q; j++) {
             cout << c[j][i];
