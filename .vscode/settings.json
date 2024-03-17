@@ -88,7 +88,12 @@
         "utility": "cpp",
         "vector": "cpp",
         "regex": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "*.tcc": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "unordered_set": "cpp",
+        "valarray": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
