@@ -4,22 +4,23 @@
             "name": "Mac",
             "defines": [],
             "macFrameworkPath": [
-                "/System/Library/Frameworks",
-                "/Library/Frameworks",
                 "/Library/Developer/CommandLineTools/usr/include",
                 "${workspaceFolder}/**"
             ],
-            "compilerPath": "/usr/bin/g++",
+            "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",
             "cppStandard": "c++17",
-            "intelliSenseMode": "clang-x64",
+            "intelliSenseMode": "${default}",
             "browse": {
                 "path": [
                     "${workspaceFolder}"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
-            }
+            },
+            "includePath": [
+                "/Library/Developer/CommandLineTools/usr/include"
+            ]
         },
         {
             "name": "Win32",
