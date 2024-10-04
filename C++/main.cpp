@@ -4,7 +4,17 @@
 #define db double
 using namespace std;
 
+void f(string s) {
+    cout << s << endl;
+}
+
+void f(int t) {
+    cout << t << endl;
+}
+
+
 int main() {
-    cout << "Testing";
+    f("Test");
+    f(123);
     return 0;
 }
