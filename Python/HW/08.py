@@ -18,8 +18,17 @@ def main():
         # timeOfLesson[i] = {}
         # timeOfLesson[i]['sujName'] = 'test'
         t = int(input())
+        if t < 1 or t > 3:
+            print('-1')
+            return
         for j in range (t):
-            timeOfLesson[i][j] = input()
+            inp = input()
+            if (not(inp[0] >= '1' and inp[0] <= '5') or
+                not(inp[1] >= '1' and inp[1] <= '9') and
+                not(inp[1] >= 'a' and inp[1] <= 'c')):
+                print('-1')
+                return
+            timeOfLesson[i][j] = inp
     isConflict(0, 1)
     isConflict(0, 2)
     isConflict(1, 2)
@@ -27,33 +36,3 @@ def main():
         print('correct')
 
 main()
-
-# timeOfLesson = dict()
-# isAC = True
-# 
-# def isConflict(x, y):
-#     for i in range (len(timeOfLesson[x])):
-#         for j in range (len(timeOfLesson[y])):
-#             if timeOfLesson[x][i] == timeOfLesson[y][j]:
-#                 print(timeOfLesson[x]['sbjName'], timeOfLesson[y]['sbjName'], timeOfLesson[x][i], sep = ",")
-#                 isAC = False
-# 
-# def main():
-#     for i in range (3):
-#         s = input()
-#         t = int(input())
-#         for j in range (t):
-#             timeOfLesson[i] = {j: input(), 'sbjName': s}
-#     isConflict(0, 1)
-#     isConflict(1, 2)
-#     isConflict(0, 2)
-#     if isAC == True:
-#         print('correct')
-# 
-# main()
-# 
-# 
-# 
-# 
-# # try:
-# # except:
