@@ -12,10 +12,7 @@ for i in range (3):
 
 for i in range (len(lst)):
     if lst[i] == True:
-        try:
-            count += 1
-            i += 1
-        except lst[i] == False:
-            pass
+        count += 1
+# count = lst.count(True)
 
 print(count)

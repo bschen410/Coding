@@ -4,17 +4,11 @@
 #define db double
 using namespace std;
 
-void f(string s) {
-    cout << s << endl;
-}
-
-void f(int t) {
-    cout << t << endl;
-}
-
-
 int main() {
-    f("Test");
-    f(123);
-    return 0;
+    int arr[3] = {'a', 'b', 'c'};
+    for (int i = 0; i < 3; i++) {
+        if (arr[i] == 'a') {
+            cout << "there is 'a' in array" << endl;
+        }
+    }
 }
