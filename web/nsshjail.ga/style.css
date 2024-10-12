@@ -1,0 +1,230 @@
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    max-width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(34, 37, 41, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    /* border-radius: 9999px; */
+    background: rgba(121, 132, 147, 0.4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(95, 104, 116);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgb(105, 115, 128);
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+    width: 0;
+    height: 0;
+    border-left: 16px solid #424c5f;
+    border-top: 16px solid #424c5f;
+    border-bottom: 16px solid transparent;
+    border-right: 16px solid transparent;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+.explain {
+    font-size: 16px;
+    color: #999999;
+}
+
+body {
+    height: 1000px;
+    color: black;
+    font-family: Microsoft JhengHei;
+}
+
+details {
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    background: #282828;
+    box-shadow: 0 .1rem 1rem -.5rem rgba(0, 0, 0, .4);
+    /* transition: height 1s ease; */
+}
+
+/*test bad*/
+/* details
+{
+    transition: height 1s ease;
+    overflow: hidden;
+}
+
+details:not([open])
+{
+    height: 1.25em;
+}
+
+details[open]
+{
+    height: 2.50em;
+} */
+
+details>summary {
+    border-radius: 7px;
+    color: #8ecdcf;
+    font-size: 24px;
+    display: block;
+    background: #333;
+    padding-left: 2.2rem;
+    position: relative;
+    user-select: none;
+}
+
+summary::before {
+    content: '';
+    border-width: .4rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #8ecdcf;
+    position: absolute;
+    top: 10px;
+    left: 1rem;
+    transform: rotate(0);
+    transform-origin: .2rem 50%;
+    transition: .25s transform ease;
+}
+
+details[open]>summary::before {
+    transform: rotate(90deg);
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details>ol {
+    color: white;
+    font-size: 18px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+details>ol>li {
+    padding-top: 5px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: 250ms;
+}
+
+a:hover {
+    color: aqua;
+}
+
+a:active {
+    color: rgba(0, 255, 255, 0.555);
+}
+
+input[type="text"] {
+    padding: 3px 20px;
+    border: 2px black solid;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+/* class schedule */
+#classSchedule {
+    user-select: none;
+}
+
+.classroom {
+    font-size: 18px;
+}
+
+thead th {
+    padding: 7px;
+    text-align: center;
+}
+
+#classSchedule tr {
+    border-bottom: 2px;
+}
+
+/* #classSchedule tbody tr:nth-child(4) * {
+    padding-bottom: 16px;
+} */
+
+#classSchedule tbody tr th {
+    font-size: 12px;
+    padding: 12px;
+}
+
+#classSchedule tr td {
+    padding: 4px;
+}
+
+
+/* Below for Footer */
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    position: relative;
+    background-color: rgb(34, 37, 41);
+}
+
+.content {
+    height: 200px;
+    /*height: 2000px;*/
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(40, 42, 44);
+    height: 50px;
+    line-height: 50px;
+}
+
+
+/* Boostrap Nav */
+html {
+    background-color: rgb(34, 37, 41);
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+/* media */
+@media(max-width:620px) {
+    details {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:480px) and (min-width:320px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    #classSchedule * {
+        font-size: 16px;
+    }
+}
+
+/* @media screen () {} */

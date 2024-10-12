@@ -1,0 +1,80 @@
+.videobg {
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background: url(bg.jpg) no-repeat center center;
+}
+.videobg:after {
+	content: "";
+	display: block;
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	width: 100%; height: 100%;
+	background: rgba(0, 0, 0, .65);
+}
+.videobg video {
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	min-height: 100%; min-width: 100%;
+}
+.wrap {
+	position: absolute;
+	top: 50%;
+	left: 15px; right: 15px;
+	transform: translate(0, -50%);
+	text-align: center;
+	color: #fff;
+	transition: all .25s;
+}
+p {
+	font-size: 1.25em;
+	text-align: left;
+}
+.logo {
+	border-radius: 6px;
+	overflow: hidden;
+}
+.button {
+	display: inline-block;
+	padding: 8px 16px;
+	border: 1px solid #fff;
+	border-radius: 6px;
+	color: #fff;
+	min-width: 120px;
+	margin-top: 1em;
+	text-decoration: none;
+	position: relative;
+	transition: all .25s;
+	font-size: 1.25em;
+}
+.button:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0; bottom: 0; left: 0;
+	width: 0;
+	background: #b40005;
+	border-radius: 4px;
+	overflow: hidden;
+	opacity: 0;
+	transition: all .25s;
+	z-index: -1;
+}
+.button:hover {
+	border-color: #b40005;
+}
+.button:hover:before {
+	width: 100%;
+	right: 0;
+	opacity: 1;
+}
+@media (min-width: 750px) {
+	.wrap {
+		left: 50%; right: auto;
+		transform: translate(-50%, -50%);
+	}
+}
+@media (min-device-width:361px) and (max-device-width:480px) {
+	.videobg video {
+		display: none;
+	}
+}
