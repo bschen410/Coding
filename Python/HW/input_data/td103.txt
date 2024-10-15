@@ -1,0 +1,6 @@
+Zone 166 81
+Hellen 285 143
+Mary 131 18
+Cookie 153 55
+Xavier 177 54
+End

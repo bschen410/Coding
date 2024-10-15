@@ -1,23 +1,33 @@
 from math import ceil
 
-total = 0
-dic = {
-    'A': {'price': 380},
-    'B': {'price': 1200},
-    'C': {'price': 180}
-}
-for _ in ['A', 'B', 'C']:
-    inp = input()
-    dic[_]['value'] = inp.split(',')
+def cal(book):
+    for i in range(len(book)):
+        if 1 <= book[i]['amount'] <= 10:
+            book[i]['total'] = ceil(book[i]['prize'] * book[i]['amount'])
+        elif 11 <= book[i]['amount'] <= 20:
+            book[i]['total'] = ceil(book[i]['prize'] * book[i]['amount'] * book[i]['d1'] / 100)
+        elif 21 <= book[i]['amount'] <= 30:
+            book[i]['total'] = ceil(book[i]['prize'] * book[i]['amount'] * book[i]['d2'] / 100)
+        elif 31 <= book[i]['amount']:
+            book[i]['total'] = ceil(book[i]['prize'] * book[i]['amount'] * book[i]['d3'] / 100)
+    return book
 
-for i in ['A', 'B', 'C']:
-    if dic[i]['value'][0] <= '10':
-        total += dic[i]['price'] * dic[i]['value'][0]
-    elif dic[i]['value'][0] <= '20':
-        total += dic[i]['price'] * dic[i]['value'][0] * dic[i]['value'][1]
-    elif dic[i]['value'][0] <= '20':
-        total += dic[i]['price'] * dic[i]['value'][0] * dic[i]['value'][1]
-    elif dic[i]['value'][0] <= '20':
-        total += dic[i]['price'] * dic[i]['value'][0] * dic[i]['value'][1]
+def main():
+    book = [{} for _ in range(3)]
+    prize_list = [380, 1200, 180]
+    book_list = ['A', 'B', 'C']
+    for i in range(3):
+        str = input()
+        str = str.split(',')
+        book[i] = {'amount': int(str[0]), 'd1': int(str[1]), 'd2': int(str[2]), 'd3': int(str[3])}
+        book[i]['prize'] = prize_list[i]
+        book[i]['product'] = book_list[i]
+    #
+    cal(book)
+    book = sorted(book, key=lambda x: x['total'], reverse=True)
+    for i in book:
+        print(i['product'], i['total'], sep = ',')
+    print(int(sum([i['total'] for i in book])))
 
-print(dic)
+if __name__ == '__main__':
+    main()
