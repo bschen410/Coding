@@ -13,21 +13,20 @@ def cal(book):
     return book
 
 def main():
-    book = [{} for _ in range(3)]
+    book = list()
     prize_list = [380, 1200, 180]
     book_list = ['A', 'B', 'C']
     for i in range(3):
-        str = input()
-        str = str.split(',')
-        book[i] = {'amount': int(str[0]), 'd1': int(str[1]), 'd2': int(str[2]), 'd3': int(str[3])}
-        book[i]['prize'] = prize_list[i]
-        book[i]['product'] = book_list[i]
+        str = input().split(',')
+        temp = {'amount': int(str[0]), 'd1': int(str[1]), 'd2': int(str[2]), 'd3': int(str[3]),
+                'prize': prize_list[i], 'product': book_list[i]}
+        book.append(temp)
     #
-    cal(book)
+    book = cal(book)
     book = sorted(book, key=lambda x: x['total'], reverse=True)
     for i in book:
         print(i['product'], i['total'], sep = ',')
-    print(int(sum([i['total'] for i in book])))
+    print(sum(i['total'] for i in book))
 
 if __name__ == '__main__':
     main()

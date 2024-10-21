@@ -14,7 +14,7 @@ def calEMI(dic, result):
             print('EMI too low')
         else:
             print(emi)
-        # result.append = {'name': dic[i]['name'], 'emiValue': emi} 
+        # result.append = {'name': dic[i]['name'], 'emiValue': emi}
         t += 1
     return dic, result
 
