@@ -7,7 +7,7 @@ def equTri(n):
         print('#' * i)
 
 def invTri(n):
-    j = 2 * n
+    j = 2 * n - 1
     for i in range(n):
         print('#' * i, end='')
         print('*' * j, end='')
@@ -55,15 +55,14 @@ def main():
     n = int(input())
     if not 2 <= n <= 50 or n % 2 == 0:
         raise Exception
-    match c:
-        case 1:
-            equTri(n)
-        case 2:
-            invTri(n)
-        case 3:
-            rhombic(n)
-        case 4:
-            fishShape(n)
+    if c == 1:
+        equTri(n)
+    elif c == 2:
+        invTri(n)
+    elif c == 3:
+        rhombic(n)
+    elif c == 4:
+        fishShape(n)
 
 if __name__ == '__main__':
     try:

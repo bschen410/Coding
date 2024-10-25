@@ -29,13 +29,12 @@ def main():
     n = int(input())
     if not 3 <= n <= 50 or not 1 <= m <= 3:
         raise Exception
-    match m:
-        case 1:
-            rightTri(n)
-        case 2:
-            equTri(n)
-        case 3:
-            invTri(n)
+    if m == 1:
+        rightTri(n)
+    elif m == 2:
+        equTri(n)
+    elif m == 3:
+        invTri(n)
 
 if __name__ == '__main__':
     try:
