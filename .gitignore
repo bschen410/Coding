@@ -1,4 +1,4 @@
 .DS_Store
-DC-bot/config.json
-DC-bot/node_modules
+DC-bot/archieved/config.json
+DC-bot/archieved/node_modules
 DC-bot/bot.py
