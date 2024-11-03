@@ -53,6 +53,14 @@ def main():
             continue
         else: cardValues.append(int(card[i][0]))
         cardSuits.append(card[i][1])
+    '''
+    card_and_value = {str(n):n for n in range(2, 11)}
+    card_and_value.update({'A':1, 'J':11, 'Q':12, 'K':13})
+    for c in card:
+        num = c[:-1]
+        cardValues.append(card_and_value[num])
+        cardSuits.append(c[-1])
+    '''
     #
     print(checkCardType(cardValues, cardSuits))
 
