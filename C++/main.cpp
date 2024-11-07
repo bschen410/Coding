@@ -5,10 +5,9 @@
 using namespace std;
 
 int main() {
-    int arr[3] = {'a', 'b', 'c'};
-    for (int i = 0; i < 3; i++) {
-        if (arr[i] == 'a') {
-            cout << "there is 'a' in array" << endl;
-        }
-    }
+    int a = 13, b = 18;
+    (a % 2) && a++;
+    (b % 2) && b--;
+    cout << a << b;
+    return 0;
 }
