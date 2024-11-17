@@ -1,4 +1,7 @@
-lst = [1, 2, 3]
+from itertools import combinations
 
-for i, j in enumerate(lst):
-    print(i, j)
+lst = ['12', '23', '45']
+
+for i in combinations(lst, 2):
+    print(i[0][0])
+

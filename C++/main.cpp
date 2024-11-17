@@ -5,9 +5,5 @@
 using namespace std;
 
 int main() {
-    int a = 13, b = 18;
-    (a % 2) && a++;
-    (b % 2) && b--;
-    cout << a << b;
-    return 0;
+    array<int, 5> arr = {1, 2, 3, 4, 5};
 }
