@@ -1,10 +1,3 @@
-import re
-
-
-def first(a, b):
-    return a + " " + b
-
-
 def second(c, x, y):
     c_split = c.split()
     for i in range(len(c_split)):
@@ -23,11 +16,9 @@ def fifth(c, n):
 
 
 def main():
-    a = input()
-    b = input()
-    x = input()
-    y = input()
+    a, b, x, y = (input() for _ in range(4))
 
+    first = lambda a, b: a + " " + b
     c = first(a, b)
     print(c)
 
@@ -37,7 +28,7 @@ def main():
 
     print(len(c) - c.count(" "), len(d) - d.count(" "))
 
-    print(d.replace(y, "".join(reversed(y))))
+    print(d.replace(y, y[::-1]))
 
     n = abs(len(x) - len(y))
     print(fifth(c, n))
