@@ -32,15 +32,11 @@ def conformMost(data, factors):
 
 
 def main():
-    n = int(input())
     data = []
-    for _ in range(n):
+    for _ in range(int(input())):
         inp = input().split()
         data.append({"name": inp[0], "prop": inp[1:]})
-    # print(data)
-    m = int(input())
-    factors = [convertFactors(input().split()) for _ in range(m)]
-    # print(factors)
+    factors = [convertFactors(input().split()) for _ in range(int(input()))]
     if input() == "0":
         conformAll(data, factors)
     else:
