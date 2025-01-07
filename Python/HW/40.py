@@ -20,6 +20,7 @@ def main():
     elif x == sum(y):
         print("\n".join(cut(gene, prefix, suffix)))
     else:
+        print(x, y)
         print("No gene")
 
 
