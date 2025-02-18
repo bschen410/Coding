@@ -1,5 +1,0 @@
-Ben 42 84
-Bob 183 45
-Geoff 185 42
-Glen 159 403
-End

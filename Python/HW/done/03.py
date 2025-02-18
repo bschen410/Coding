@@ -1,6 +1,0 @@
-a = int(input())
-b = int(input())
-print('%s%.2f'%('Sum:', a + b))
-print('%s%.2f'%('Difference:', a - b))
-print('%s%.2f'%('Product:', a * b))
-print('%s%.2f'%('Quotient:', a / b))
